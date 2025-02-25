@@ -1,33 +1,99 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <h1>App de Notas</h1>
+      <h1>AC01</h1>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-  <ion-item>
-    <ion-input label="Primeira Nota" color="danger" labelPlacement="floating" type="number" placeholder="Inserir Nota"  [(ngModel)]="notaUm"></ion-input>
-  </ion-item>
+
+  <h2><b>EX 01</b> - Convertor de Temperatura</h2>
 
   <ion-item>
-    <ion-input label="Segunda Nota" color="primary" labelPlacement="floating" type="number" placeholder="Inserir Nota" [(ngModel)]="notaDois"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input label="Terceira Nota" color="tertiary" labelPlacement="floating" type="number" placeholder="Inserir Nota" [(ngModel)]="notaTres"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-input label="Quarta Nota" color="warning" labelPlacement="floating" type="number" placeholder="Inserir Nota" [(ngModel)]="notaQuatro"></ion-input>
+    <ion-input label="Fahrenheit" type="number" labelPlacement="floating" type="number" placeholder="Valor em F"
+      [(ngModel)]="valorF"></ion-input>
   </ion-item>
 
   <div class="container">
-  <ion-button class="button" (click)="calcularMedia()" >Verificação de Notas</ion-button>
-</div>
+    <ion-button class="botao" type="number" color="primary" (click)="converterPraC()">Converter para <div class="letra">
+        C</div>
+    </ion-button>
 
-  <div class="resultado" ion-label>Resultado: {{resultado}}</div>
+
+
+  <ion-label id="resultadoConversão"><b>{{valorConvertidoPraC}}°C</b>
+  </ion-label>
+
+
+  <ion-item >
+    <ion-input label="Celsius" type="number" labelPlacement="floating" type="number" placeholder="Valor em C"
+      [(ngModel)]="valorC"></ion-input>
+  </ion-item>
+
+  <div class="container">
+    <ion-button class="botao" type="number" color="danger" (click)="converterPraF()">Converter para <div class="letra">F
+      </div>
+    </ion-button>
+  </div>
+
+
+  <ion-label type="number" id="resultadoConversão"><b>{{valorConvertidoPraF}}°F</b></ion-label>
+  <!--ex 02 - triangulo-->
+
+  <h2><b>EX 02</b> - Triângulo</h2>
+
+  <ion-item>
+    <ion-input label="Inserir valor" labelPlacement="floating" placeholder="Valor" color="danger" type="number"
+      [(ngModel)]="lado1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Inserir valor" labelPlacement="floating" placeholder="Valor" color="primary" type="number"
+      [(ngModel)]="lado2"></ion-input>
+  </ion-item>
+  <ion-item>
+
+    <ion-input label="Inserir valor" labelPlacement="floating" placeholder="Valor" color="success" type="number"
+      [(ngModel)]="lado3"></ion-input>
+  </ion-item>
+
+  <div class="container">
+    <ion-button color="warning" (click)="verificarTriangulo()"><strong>Verificar Triângulo</strong></ion-button><br>
+    <ion-button color="secondary" (click)="tipoTriangulo()"><strong>Qual é o tipo de Triângulo?</strong></ion-button>
+  </div>
+
+  <br>
+  <div class="res" ion-label>Verificação: <b>{{res}}</b></div>
+
+  <!--ex02-->
+
+  <h2><b>EX 03</b> - Notas</h2>
+  <ion-item>
+    <ion-input label="Primeira Nota" color="danger" labelPlacement="floating" type="number" placeholder="Inserir Nota"
+      [(ngModel)]="notaUm"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Segunda Nota" color="primary" labelPlacement="floating" type="number" placeholder="Inserir Nota"
+      [(ngModel)]="notaDois"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Terceira Nota" color="tertiary" labelPlacement="floating" type="number" placeholder="Inserir Nota"
+      [(ngModel)]="notaTres"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Quarta Nota" color="warning" labelPlacement="floating" type="number" placeholder="Inserir Nota"
+      [(ngModel)]="notaQuatro"></ion-input>
+  </ion-item>
+
+  <div class="container">
+    <ion-button class="button" (click)="calcularMedia()">Verificação de Notas</ion-button>
+  </div>
+
+  <div class="resultado" ion-label>Resultado: <b>{{res}}</b></div>
 
 </ion-content>

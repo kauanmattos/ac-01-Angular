@@ -1,4 +1,4 @@
-<h2> Avaliação Continua - 1 tri - linguagem de programação</h2> 
+<h2> Avaliação Continua - 1° Trimestre - Linguagem de programação</h2> 
 
 Aplicativo para conversão de temperatura, cálculo de triângulos e médias escolares
 Este repositório contém um aplicativo Ionic que realiza as seguintes tarefas:
